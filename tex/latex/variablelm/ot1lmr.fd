@@ -1,0 +1,64 @@
+\ProvidesFile{ot1lmr.fd}[2015/08/17 v1.0 font defs for variable Latin Modern]
+
+\expandafter\ifx\csname alphabet@scale\endcsname\relax
+ \let\alphabet@@scale\@empty
+\else
+ \edef\alphabet@@scale{s*[\csname alphabet@scale\endcsname]}%
+\fi
+
+\DeclareFontFamily{OT1}{lmr}{}
+\DeclareFontShape{OT1}{lmr}{m}{n}%
+     {<-5.5>    \alphabet@@scale rm-lmr5
+      <5.5-6.5> \alphabet@@scale rm-lmr6
+      <6.5-7.5> \alphabet@@scale rm-lmr7
+      <7.5-8.5> \alphabet@@scale rm-lmr8
+      <8.5-9.5> \alphabet@@scale rm-lmr9
+      <9.5-11>  \alphabet@@scale rm-lmr10
+      <11-15>   \alphabet@@scale rm-lmr12
+      <15->     \alphabet@@scale rm-lmr17
+      }{}
+\DeclareFontShape{OT1}{lmr}{m}{sl}%
+     {<-8.5>    \alphabet@@scale rm-lmro8
+      <8.5-9.5> \alphabet@@scale rm-lmro9
+      <9.5-11>  \alphabet@@scale rm-lmro10
+      <11-15>   \alphabet@@scale rm-lmro12
+      <15->     \alphabet@@scale rm-lmro17
+      }{}
+\DeclareFontShape{OT1}{lmr}{m}{it}%
+     {<-7.5>    \alphabet@@scale rm-lmri7
+      <7.5-8.5> \alphabet@@scale rm-lmri8
+      <8.5-9.5> \alphabet@@scale rm-lmri9
+      <9.5-11>  \alphabet@@scale rm-lmri10
+      <11->     \alphabet@@scale rm-lmri12
+      }{}
+\DeclareFontShape{OT1}{lmr}{m}{sc}%
+     {<-> \alphabet@@scale rm-lmcsc10}{}
+\DeclareFontShape{OT1}{lmr}{m}{ui}%
+     {<-> \alphabet@@scale rm-lmu10}{}
+%
+% Is this the right 'shape'?:
+\DeclareFontShape{OT1}{lmr}{m}{scsl}%
+     {<-> \alphabet@@scale rm-lmcsco10}{}
+%%%%%%% bold series
+\DeclareFontShape{OT1}{lmr}{b}{n}
+     {<-> \alphabet@@scale rm-lmb10}{}
+\DeclareFontShape{OT1}{lmr}{b}{sl}
+     {<-> \alphabet@@scale rm-lmbo10}{}
+%%%%%%% bold extended series
+\DeclareFontShape{OT1}{lmr}{bx}{n}
+     {<-5.5>    \alphabet@@scale rm-lmbx5
+      <5.5-6.5> \alphabet@@scale rm-lmbx6
+      <6.5-7.5> \alphabet@@scale rm-lmbx7
+      <7.5-8.5> \alphabet@@scale rm-lmbx8
+      <8.5-9.5> \alphabet@@scale rm-lmbx9
+      <9.5-11>  \alphabet@@scale rm-lmbx10
+      <11->    \alphabet@@scale rm-lmbx12
+      }{}
+\DeclareFontShape{OT1}{lmr}{bx}{it}
+     {<-> \alphabet@@scale rm-lmbxi10}{}
+\DeclareFontShape{OT1}{lmr}{bx}{sl}
+     {<-> \alphabet@@scale rm-lmbxo10}{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{OT1}{lmr}{b}{it}
+     {<->sub * lmr/b/sl}{}
+\endinput
