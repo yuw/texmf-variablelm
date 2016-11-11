@@ -1,0 +1,13 @@
+\ProvidesFile{omxlmex.fd}[2016/11/09 v1.0 font defs for variable Latin Modern]
+
+\expandafter\ifx\csname alphabet@scale\endcsname\relax
+ \let\alphabet@@scale\@empty
+\else
+ \edef\alphabet@@scale{s*[\csname alphabet@scale\endcsname]}%
+\fi
+
+\DeclareFontFamily{OMX}{lmex}{}
+\DeclareFontShape{OMX}{lmex}{m}{n}{%
+   <-> \alphabet@@scale lmex10%
+   }{}
+\endinput

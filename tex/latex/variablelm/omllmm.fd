@@ -17,10 +17,10 @@
       <11->     \alphabet@@scale lmmi12
       }{}
 \DeclareFontShape{OML}{lmm}{b}{it}{%
-       <-6> \alphabet@@scale lmmib5
+      <-6>  \alphabet@@scale lmmib5
       <6-8> \alphabet@@scale lmmib7
       <8->  \alphabet@@scale lmmib10
       }{}
 \DeclareFontShape{OML}{lmm}{bx}{it}%
-     {<->sub*lmm/b/it}{}
+     {<-> sub*lmm/b/it}{}
 \endinput
