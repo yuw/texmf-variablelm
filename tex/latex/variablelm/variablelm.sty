@@ -1,0 +1,18 @@
+\ProvidesPackage{variablelm}[2016/11/11 v1.0 to control the scaling for Latin Modern Fonts by Yuwsuke KIEDA]
+
+\RequirePackage{xkeyval}
+\@ifpackageloaded{lmodern}{}{\@latexerr{You must be load "lmodern" package}\@ehb}
+\@ifpackageloaded{amsmath}{}{%
+  \@latex@warning@no@line{\noexpand\usepackage{amsmath} is effective for correct functioning of \noexpand\big, \noexpand\Big, \noexpand\bigg, etc}}
+
+\DeclareOptionX{scale}[1.0]{\def\alphabet@scale{#1}}
+\DeclareOptionX{ttscale}[1.0]{\def\alphabet@scale@tt{#1}}
+\DeclareOptionX{sfscale}[1.0]{\def\alphabet@scale@sf{#1}}
+
+\@ifundefined{alphabet@scale}{\def\alphabet@scale{1.0}}{}
+\@ifundefined{alphabet@scale@tt}{\def\alphabet@scale@tt{\alphabet@scale}}{}
+\@ifundefined{alphabet@scale@sf}{\def\alphabet@scale@sf{\alphabet@scale}}{}
+
+\ProcessOptionsX
+
+\endinput

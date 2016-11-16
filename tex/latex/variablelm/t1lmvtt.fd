@@ -1,0 +1,57 @@
+\ProvidesFile{t1lmvtt.fd}[2016/11/16 v1.0 font defs for variable Latin Modern]
+
+\expandafter\ifx\csname alphabet@scale@tt\endcsname\relax
+ \let\alphabet@@scale@tt\@empty
+\else
+ \edef\alphabet@@scale@tt{s*[\csname alphabet@scale@tt\endcsname]}%
+\fi
+
+\DeclareFontFamily{T1}{lmvtt}{}
+
+\ifx\lmtt@use@light@as@normal\@empty
+% macro defined, so we use the light variant as medium (m), and
+% medium as semi-bold (sb):
+\DeclareFontShape{T1}{lmvtt}{sb}{n}
+     {<-> \alphabet@@scale@tt ec-lmvtt10}{}
+\DeclareFontShape{T1}{lmvtt}{sb}{sl}
+     {<-> \alphabet@@scale@tt ec-lmvtto10}{}
+\DeclareFontShape{T1}{lmvtt}{sb}{it}
+     {<->sub*lmvtt/m/sl}{}
+%%%%%%%% light (l) and dark (b) variants:
+\DeclareFontShape{T1}{lmvtt}{m}{n}
+     {<-> \alphabet@@scale@tt ec-lmvtl10}{}
+\DeclareFontShape{T1}{lmvtt}{m}{sl}
+     {<-> \alphabet@@scale@tt ec-lmvtlo10}{}
+\DeclareFontShape{T1}{lmvtt}{m}{it}
+     {<->sub*lmvtt/l/sl}{}
+
+\else
+% usual setup of variants:
+\DeclareFontShape{T1}{lmvtt}{m}{n}
+     {<-> \alphabet@@scale@tt ec-lmvtt10}{}
+\DeclareFontShape{T1}{lmvtt}{m}{sl}
+     {<-> \alphabet@@scale@tt ec-lmvtto10}{}
+\DeclareFontShape{T1}{lmvtt}{m}{it}
+     {<->sub*lmvtt/m/sl}{}
+%%%%%%%% light (l) and dark (b) variants:
+\DeclareFontShape{T1}{lmvtt}{l}{n}
+     {<-> \alphabet@@scale@tt ec-lmvtl10}{}
+\DeclareFontShape{T1}{lmvtt}{l}{sl}
+     {<-> \alphabet@@scale@tt ec-lmvtlo10}{}
+\DeclareFontShape{T1}{lmvtt}{l}{it}
+     {<->sub*lmvtt/l/sl}{}
+\fi
+% bold is always bold (b):
+\DeclareFontShape{T1}{lmvtt}{b}{n}
+     {<-> \alphabet@@scale@tt ec-lmvtk10}{}
+\DeclareFontShape{T1}{lmvtt}{b}{sl}
+     {<-> \alphabet@@scale@tt ec-lmvtko10}{}
+\DeclareFontShape{T1}{lmvtt}{b}{it}
+     {<->sub*lmvtt/b/sl}{}
+\DeclareFontShape{T1}{lmvtt}{bx}{n}
+     {<->ssub*lmvtt/b/n}{}
+\DeclareFontShape{T1}{lmvtt}{bx}{sl}
+     {<->ssub*lmvtt/b/sl}{}
+\DeclareFontShape{T1}{lmvtt}{bx}{it}
+     {<->sub*lmvtt/b/sl}{}
+\endinput
