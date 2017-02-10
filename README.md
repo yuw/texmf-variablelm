@@ -20,15 +20,11 @@ For example: Japanese--Latin.
 ### Preamble
 
 ```
-\begin{quote}
-\begin{verbatim}
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[scale=1.09,ttscale=1.12]{variablelm}
-\end{verbatim}
-\end{quote}
 ```
 
 Remark: \texttt{amsmath} is for \verb!\big!, \verb!\Big!, \verb!\bigg!, etc.
