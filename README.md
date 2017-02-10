@@ -1,6 +1,4 @@
-# texmf-variablelm
-
-font definitions for variable Latin Modern
+# Control the Scaling for the Latin Modern Fonts
 
 ## Descriptions
 
@@ -10,6 +8,10 @@ It is directed to Latin Modern fonts.
 It provide the following files: fd and sty.
 This mechanism is useful in mixed text composition.
 For example: Japanese--Latin.
+
+## Version
+
+1.0
 
 ## Requirements
 
@@ -33,6 +35,10 @@ Remark: \texttt{amsmath} is for \verb!\big!, \verb!\Big!, \verb!\bigg!, etc.
 
  * scale: Roman, italic, bold, bold italic, small caps
  * ttscale: fixed (\ttfamily)
+
+## Author
+
+Yuwsuke KIEDA
 
 ## License
 
