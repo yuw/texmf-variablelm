@@ -13,6 +13,33 @@
 \@ifundefined{alphabet@scale@tt}{\def\alphabet@scale@tt{\alphabet@scale}}{}
 \@ifundefined{alphabet@scale@sf}{\def\alphabet@scale@sf{\alphabet@scale}}{}
 
+\renewcommand{\rmdefault}{vlmr}
+\renewcommand{\sfdefault}{vlmss}
+\renewcommand{\ttdefault}{vlmtt}
+
+\DeclareOptionX{variablett}{\renewcommand{\ttdefault}{vlmvtt}}
+\DeclareOptionX{lighttt}{\let\vlmtt@use@light@as@normal\@empty}
+
+%\ProcessOptions\relax
+
 \ProcessOptionsX
+
+\SetSymbolFont{operators}   {normal}{OT1}{vlmr} {m}{n}
+\SetSymbolFont{letters}     {normal}{OML}{vlmm} {m}{it}
+\SetSymbolFont{symbols}     {normal}{OMS}{vlmsy}{m}{n}
+\SetSymbolFont{largesymbols}{normal}{OMX}{vlmex}{m}{n}
+\SetSymbolFont{operators}   {bold}  {OT1}{vlmr} {bx}{n}
+\SetSymbolFont{letters}     {bold}  {OML}{vlmm} {b}{it}
+\SetSymbolFont{symbols}     {bold}  {OMS}{vlmsy}{b}{n}
+\SetSymbolFont{largesymbols}{bold}  {OMX}{vlmex}{m}{n}
+
+\SetMathAlphabet{\mathbf}{normal}{OT1}{vlmr}{bx}{n}
+\SetMathAlphabet{\mathsf}{normal}{OT1}{vlmss}{m}{n}
+\SetMathAlphabet{\mathit}{normal}{OT1}{vlmr}{m}{it}
+\SetMathAlphabet{\mathtt}{normal}{OT1}{vlmtt}{m}{n}
+\SetMathAlphabet{\mathbf}{bold}  {OT1}{vlmr}{bx}{n}
+\SetMathAlphabet{\mathsf}{bold}  {OT1}{vlmss}{bx}{n}
+\SetMathAlphabet{\mathit}{bold}  {OT1}{vlmr}{bx}{it}
+\SetMathAlphabet{\mathtt}{bold}  {OT1}{vlmtt}{m}{n}
 
 \endinput

@@ -35,6 +35,8 @@ Remark: \texttt{amsmath} is for \verb!\big!, \verb!\Big!, \verb!\bigg!, etc.
 
  * scale: Roman, italic, bold, bold italic, small caps
  * ttscale: fixed (\ttfamily)
+ * variablett: same the lmodern.sty
+ * lighttt: same the lmodern.sty
 
 ## Author
 
