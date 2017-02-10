@@ -1,0 +1,59 @@
+\documentclass{article}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\renewcommand*\ttdefault{lmvtt}
+
+\title{Control the Scaling for the Latin Modern Fonts}
+\author{Yuwsuke KIEDA}
+\date{2017/02/10 v1.0}
+
+\begin{document}
+
+\maketitle
+
+\section{Descriptions}
+
+We provide a mechanism for scaling the typeface.
+
+It is directed to Latin Modern fonts.
+It provide the following files: fd and sty.
+This mechanism is useful in mixed text composition.
+For example: Japanese--Latin.
+
+\section{Requirements}
+
+\begin{itemize}
+ \item the Latin Modern fonts
+\end{itemize}
+
+\section{Usage}
+
+\subsection{Preamble}
+
+\begin{quote}
+\begin{verbatim}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[scale=1.09,ttscale=1.12]{variablelm}
+\end{verbatim}
+\end{quote}
+
+Remark: \texttt{amsmath} is for \verb!\big!, \verb!\Big!, \verb!\bigg!, etc.
+
+\subsection{Options}
+
+\begin{itemize}
+ \item [\textendash] \texttt{scale}: Roman, italic, bold, bold italic, small caps
+ \item [\textendash] \texttt{ttscale}: fixed (\verb!\ttfamily!)
+\end{itemize}
+
+
+\section{License}
+
+the GUST Font License (version 1.0)
+
+\end{document}
