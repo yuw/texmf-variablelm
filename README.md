@@ -11,7 +11,7 @@ For example: Japanese--Latin.
 
 ## Version
 
-1.0
+1.1
 
 ## Requirements
 
@@ -35,6 +35,8 @@ Remark: \texttt{amsmath} is for \verb!\big!, \verb!\Big!, \verb!\bigg!, etc.
 
  * scale: Roman, italic, bold, bold italic, small caps
  * ttscale: fixed (\ttfamily)
+ * sfscale: sans-serif (\sffamily)
+ * encoding: font encoding (default: T1)
  * variablett: same the lmodern.sty
  * lighttt: same the lmodern.sty
 
