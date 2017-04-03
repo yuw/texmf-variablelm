@@ -47,3 +47,7 @@ Yuwsuke KIEDA
 ## License
 
 the GUST Font License (version 1.0)
+
+## Repository
+
+https://github.com/yuw/texmf-variablelm
