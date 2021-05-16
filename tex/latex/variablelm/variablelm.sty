@@ -1,4 +1,4 @@
-\ProvidesPackage{variablelm}[2018/02/13 v1.1.2 to control the scaling for Latin Modern Fonts by Yuwsuke KIEDA]
+\ProvidesPackage{variablelm}[2021/05/16 v1.2 to control the scaling for Latin Modern Fonts by Yuwsuke KIEDA]
 
 \RequirePackage{xkeyval}
 \@ifpackageloaded{lmodern}{}{\@latexerr{You must be load "lmodern" package}\@ehb}
@@ -18,6 +18,8 @@
 \renewcommand{\rmdefault}{vlmr}
 \renewcommand{\sfdefault}{vlmss}
 \renewcommand{\ttdefault}{vlmtt}
+
+\renewcommand{\bfdefault}{bx}
 
 \DeclareOptionX{variablett}{\renewcommand{\ttdefault}{vlmvtt}}
 \DeclareOptionX{lighttt}{\let\vlmtt@use@light@as@normal\@empty}

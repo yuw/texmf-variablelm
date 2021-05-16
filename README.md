@@ -11,7 +11,7 @@ For example: Japanese--Latin.
 
 ## Version
 
-1.1.2
+1.2
 
 ## Requirements
 
