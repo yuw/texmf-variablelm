@@ -1,0 +1,60 @@
+%
+% This file is an extended version of the file ot1lmss.fd' which
+% belongs to the Latin Modern package. The work is released
+% under the GUST Font License.
+% It provides a mechanism for scaling the typeface.
+%
+% The original font description files are included in modern TeX
+% distributions or are available via http://ctan.org/pkg/lm
+%
+\ProvidesFile{ot1vlmss.fd}[2022/06/15 v1.0 font defs for variable Latin Modern]
+
+\expandafter\ifx\csname alphabet@scale@sf\endcsname\relax
+ \let\alphabet@@scale@sf\@empty
+\else
+ \edef\alphabet@@scale@sf{s*[\csname alphabet@scale@sf\endcsname]}%
+\fi
+
+\DeclareFontFamily{OT1}{vlmss}{}
+\DeclareFontShape{OT1}{vlmss}{m}{n}
+     {<-8.5>    \alphabet@@scale@sf rm-lmss8
+      <8.5-9.5> \alphabet@@scale@sf rm-lmss9
+      <9.5-11>  \alphabet@@scale@sf rm-lmss10
+      <11-15.5> \alphabet@@scale@sf rm-lmss12
+      <15.5->   \alphabet@@scale@sf rm-lmss17
+      }{}
+\DeclareFontShape{OT1}{vlmss}{m}{it}
+      {<->ssub*lmss/m/sl}{}
+\DeclareFontShape{OT1}{vlmss}{m}{sl}
+     {<-8.5>    \alphabet@@scale@sf rm-lmsso8
+      <8.5-9.5> \alphabet@@scale@sf rm-lmsso9
+      <9.5-11>  \alphabet@@scale@sf rm-lmsso10
+      <11-15.5> \alphabet@@scale@sf rm-lmsso12
+      <15.5->   \alphabet@@scale@sf rm-lmsso17
+      }{}
+%%%%%%% Font/shape undefined, therefore substituted
+\DeclareFontShape{OT1}{vlmss}{m}{sc}
+     {<->sub*lmr/m/sc}{}
+\DeclareFontShape{OT1}{vlmss}{b}{n}
+     {<->ssub * lmss/bx/n}{}
+\DeclareFontShape{OT1}{vlmss}{b}{sl}
+     {<->ssub * lmss/bx/sl}{}
+\DeclareFontShape{OT1}{vlmss}{b}{it}
+     {<->ssub * lmss/bx/it}{}
+%%%%%%%% semibold condensed series
+\DeclareFontShape{OT1}{vlmss}{sbc}{n}
+     {<-> \alphabet@@scale@sf rm-lmssdc10}{}
+\DeclareFontShape{OT1}{vlmss}{sbc}{sl}
+     {<-> \alphabet@@scale@sf rm-lmssdo10}{}
+\DeclareFontShape{OT1}{vlmss}{sbc}{it}
+     {<->ssub*lmss/sbc/sl}{}
+%%%%%%%%% bold extended series
+\DeclareFontShape{OT1}{vlmss}{bx}{n}
+     {<-> \alphabet@@scale@sf rm-lmssbx10}{}
+\DeclareFontShape{OT1}{vlmss}{bx}{sl}
+     {<-> \alphabet@@scale@sf rm-lmssbo10}{}
+\DeclareFontShape{OT1}{vlmss}{bx}{it}
+     {<->ssub*lmss/bx/sl}{}
+\endinput
+%%
+%% End of file `ot1lmss.fd'.

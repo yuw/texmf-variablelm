@@ -7,7 +7,7 @@
 % The original font description files are included in modern TeX
 % distributions or are available via http://ctan.org/pkg/lm
 %
-\ProvidesFile{t1vlmr.fd}[2017/02/10 v1.0 font defs for variable Latin Modern]
+\ProvidesFile{t1vlmr.fd}[2022/07/09 v1.1 font defs for variable Latin Modern]
 
 \expandafter\ifx\csname alphabet@scale\endcsname\relax
  \let\alphabet@@scale\@empty
@@ -66,6 +66,20 @@
 \DeclareFontShape{T1}{vlmr}{bx}{it}
      {<-> \alphabet@@scale ec-lmbxi10}{}
 \DeclareFontShape{T1}{vlmr}{bx}{sl}
+     {<-> \alphabet@@scale ec-lmbxo10}{}
+%%%%%%% extra bold extended series
+\DeclareFontShape{T1}{vlmr}{eb}{n}
+     {<-5.5>    \alphabet@@scale ec-lmbx5
+      <5.5-6.5> \alphabet@@scale ec-lmbx6
+      <6.5-7.5> \alphabet@@scale ec-lmbx7
+      <7.5-8.5> \alphabet@@scale ec-lmbx8
+      <8.5-9.5> \alphabet@@scale ec-lmbx9
+      <9.5-11>  \alphabet@@scale ec-lmbx10
+      <11->     \alphabet@@scale ec-lmbx12
+      }{}
+\DeclareFontShape{T1}{vlmr}{eb}{it}
+     {<-> \alphabet@@scale ec-lmbxi10}{}
+\DeclareFontShape{T1}{vlmr}{eb}{sl}
      {<-> \alphabet@@scale ec-lmbxo10}{}
 %%%%%%% Font/shape undefined, therefore substituted
 \DeclareFontShape{T1}{vlmr}{b}{it}
